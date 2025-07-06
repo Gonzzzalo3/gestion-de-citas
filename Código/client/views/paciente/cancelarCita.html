@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cancelar Cita</title>
+  <link rel="stylesheet" href="../../css/cancelarCita.css">
+</head>
+<body>
+  <!-- CABECERA UNIFICADA -->
+  <header>
+    <div class="top-header">
+      <div class="left-nav">
+        <div class="logo">
+          <img src="../../images/municipalidad.jpg" alt="Logo Municipalidad de Lima" class="municipalidad-logo">
+          <a href="home.html">Municipalidad de Lima</a>
+        </div>
+        <nav class="nav-links">
+          <a href="home.html">Inicio</a>
+          <a href="verCitas.html">Mis Citas</a>
+        </nav>
+      </div>
+      <div class="profile-menu">
+        <div id="profileToggle" class="profile-toggle">
+          <span class="profile-icon">👤</span>
+        </div>
+        <ul id="profileDropdown" class="dropdown">
+          <li><a href="settings.html">Configuración</a></li>
+          <li><a href="help.html">Ayuda</a></li>
+          <li class="separator"></li>
+          <li><button id="logoutBtn" class="logout-btn">Cerrar sesión</button></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- TÍTULO -->
+  <div class="welcome-message">
+    <h1>Cancelar Cita</h1>
+  </div>
+
+  <!-- FORMULARIO -->
+  <main>
+    <form id="cancelarCitaForm">
+      <input type="hidden" id="cita_id" name="cita_id">
+      
+      <div>
+        <label for="motivo_cancelacion">Motivo de Cancelación:</label>
+        <input type="text" id="motivo_cancelacion" name="motivo_cancelacion" required>
+      </div>
+
+      <div>
+        <label for="observacion">Observación (opcional):</label>
+        <textarea id="observacion" name="observacion"></textarea>
+      </div>
+
+      <button type="submit">Cancelar Cita</button>
+    </form>
+  </main>
+
+  <!-- SCRIPTS -->
+  <script src="../../js/cancelarCita.js"></script>
+  <script src="../../js/logout.js"></script>
+  <script src="../../js/settings.js"></script>
+</body>
+</html>

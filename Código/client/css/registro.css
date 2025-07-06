@@ -1,0 +1,85 @@
+/* Reinicio básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo y estilos generales */
+body {
+  background-color: #e0f7fa;  /* Azul claro, similar al Hospital Solidaridad de Piura */
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Título de la página */
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Estilo del bloque de registro */
+form#registroForm {
+  background: #fff;
+  width: 320px;   /* Ancho fijo para simetría */
+  margin: 0 auto; /* Centrado horizontal */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Etiquetas de los campos */
+form#registroForm label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #444;
+}
+
+/* Estilos para los inputs */
+form#registroForm input[type="text"],
+form#registroForm input[type="email"],
+form#registroForm input[type="password"],
+form#registroForm input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Botón de registro */
+form#registroForm button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #0078d4;
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+form#registroForm button[type="submit"]:hover {
+  background-color: #005fa3;
+}
+
+/* Estilo para el enlace de "Iniciar sesión" */
+p {
+  width: 320px; /* Igual al formulario para mantener la simetría */
+  margin: 10px auto 0 auto;
+  text-align: left; /* Alineado a la izquierda */
+}
+
+p a {
+  color: #0078d4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+p a:hover {
+  text-decoration: underline;
+}

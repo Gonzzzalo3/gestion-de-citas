@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Agendar Cita</title>
+  <link rel="stylesheet" href="../../css/agendar.css">
+</head>
+<body>
+  <!-- CABECERA SUPERIOR -->
+  <header>
+    <div class="top-header">
+      <div class="left-nav">
+        <div class="logo">
+          <!-- Logo de la Municipalidad de Lima -->
+          <img src="../../images/municipalidad.jpg" alt="Logo Municipalidad de Lima" class="municipalidad-logo">
+          <a href="home.html">Municipalidad de Lima</a>
+        </div>
+        <nav class="nav-links">
+          <a href="home.html">Inicio</a>
+          <a href="verCitas.html">Ver Citas</a>
+        </nav>
+      </div>
+      <div class="profile-menu">
+        <div id="profileToggle" class="profile-toggle">
+          <span class="profile-icon">👤</span>
+        </div>
+        <ul id="profileDropdown" class="dropdown">
+          <li><a href="settings.html">Configuración</a></li>
+          <li><a href="help.html">Ayuda</a></li>
+          <li class="separator"></li>
+          <li><button id="logoutBtn" class="logout-btn">Cerrar sesión</button></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- FORMULARIO -->
+  <main>
+    <form id="agendarCitaForm">
+      <div>
+        <label for="especialidad">Especialidad:</label>
+        <select id="especialidad" required>
+          <option value="">Seleccione una especialidad</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="medico">Médico:</label>
+        <select id="medico" required>
+          <option value="">Seleccione un médico</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="fecha">Fecha Deseada:</label>
+        <input type="date" id="fecha" required>
+      </div>
+
+      <div>
+        <label for="horario">Horario Disponible:</label>
+        <select id="horario" required>
+          <option value="">Seleccione un horario</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="motivo">Motivo de la Cita:</label>
+        <textarea id="motivo" rows="4" placeholder="Describa el motivo"></textarea>
+      </div>
+
+      <div>
+        <button type="submit">Agendar Cita</button>
+      </div>
+    </form>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="hospital-footer">
+    <p>&copy; 2025 Hospital Solidaridad. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../../js/agendar.js"></script>
+  <script src="../../js/logout.js"></script>
+  <script src="../../js/settings.js"></script>
+</body>
+</html>

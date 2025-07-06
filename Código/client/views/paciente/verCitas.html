@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Historial de Citas</title>
+  <link rel="stylesheet" href="../../css/verCitasPaciente.css">
+</head>
+<body>
+  <!-- CABECERA SUPERIOR -->
+  <header>
+    <div class="top-header">
+      <div class="left-nav">
+        <div class="logo">
+          <!-- Logo de la Municipalidad de Lima -->
+          <img src="../../images/municipalidad.jpg" alt="Logo Municipalidad de Lima" class="municipalidad-logo">
+          <a href="home.html">Municipalidad de Lima</a>
+        </div>
+        <nav class="nav-links">
+          <a href="home.html">Inicio</a>
+          <a href="agendar.html">Agendar Cita</a>
+        </nav>
+      </div>
+      <div class="profile-menu">
+        <div id="profileToggle" class="profile-toggle">
+          <span class="profile-icon">👤</span>
+        </div>
+        <ul id="profileDropdown" class="dropdown">
+          <li><a href="settings.html">Configuración</a></li>
+          <li><a href="help.html">Ayuda</a></li>
+          <li class="separator"></li>
+          <li><button id="logoutBtn" class="logout-btn">Cerrar sesión</button></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- MENSAJE PRINCIPAL -->
+  <div class="welcome-message">
+    <h1>Historial de Citas</h1>
+  </div>
+
+  <!-- TABLA PARA MOSTRAR LAS CITAS -->
+  <main>
+    <input type="hidden" id="paciente_id">
+
+    <table id="citasTable" border="1">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Médico</th>
+          <th>Fecha</th>
+          <th>Hora</th>
+          <th>Motivo</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Aquí se cargarán las citas dinámicamente -->
+      </tbody>
+    </table>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="hospital-footer">
+    <p>&copy; 2025 Hospital Solidaridad. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../../js/verCitas.js"></script>
+  <script src="../../js/logout.js"></script>
+  <script src="../../js/settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Inicio Médico</title>
+  <link rel="stylesheet" href="../../css/homeMedico.css" />
+</head>
+<body>
+  <!-- CABECERA SUPERIOR -->
+  <header>
+    <div class="top-header">
+      <div class="left-nav">
+        <div class="logo">
+          <!-- Logo de la Municipalidad de Lima -->
+          <img src="../../images/municipalidad.jpg" alt="Logo Municipalidad de Lima" class="municipalidad-logo" />
+          <a href="home.html">Municipalidad de Lima</a>
+        </div>
+        <nav class="nav-links">
+          <a href="verCitas.html">Citas Asignadas</a>
+        </nav>
+      </div>
+      <div class="profile-menu">
+        <div id="profileToggle" class="profile-toggle">
+          <span class="profile-icon">👤</span>
+        </div>
+        <ul id="profileDropdown" class="dropdown">
+          <li><a href="settings.html">Configuración</a></li>
+          <li><a href="help.html">Ayuda</a></li>
+          <li class="separator"></li>
+          <li><button id="logoutBtn" class="logout-btn">Cerrar sesión</button></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- MENSAJE DE BIENVENIDA -->
+  <div class="welcome-message">
+    <h1 id="welcomeMsg">Bienvenido</h1>
+  </div>
+
+  <!-- SECCIÓN DE INFORMACIÓN INSTITUCIONAL -->
+  <section class="hospital-info">
+    <div class="hospital-banner">
+      <img src="../../images/hospital-de-la-solidaridad.jpg" alt="Hospital de la Solidaridad de Piura" />
+    </div>
+    <div class="hospital-details">
+      <h2>Hospital de la Solidaridad de Piura</h2>
+      <p><strong>Dirección:</strong> Av. Ramón Castilla 365</p>
+      <p><strong>Teléfono:</strong> 908 877 882</p>
+
+      <div class="especialidades">
+        <h3>Especialidades</h3>
+        <ul>
+          <li>CARDIOLOGÍA</li>
+          <li>DERMATOLOGÍA</li>
+          <li>GINECOLOGÍA</li>
+          <li>OFTALMOLOGÍA</li>
+          <li>PEDIATRÍA</li>
+        </ul>
+      </div>
+
+      <div class="horario-atencion">
+        <h3>Horario de Atención</h3>
+        <p><strong>Lunes a viernes:</strong> 07:00 – 19:00</p>
+        <p><strong>Sábado:</strong> 07:00 – 19:00</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="hospital-footer">
+    <p>&copy; 2025 Hospital Solidaridad. Todos los derechos reservados.</p>
+    <p><strong>Ubicación:</strong> Jr. Carlos Concha 163 - San Isidro (SEDE ADMINISTRATIVA)</p>
+    <p><strong>Correo electrónico:</strong> mesadepartesvirtual@sisol.gob.pe</p>
+    <p><strong>Oficina Administrativa:</strong> Mesa de Partes - Trámite Documentario: 919489372</p>
+    <p>
+      Síguenos:
+      <a href="https://facebook.com">Facebook</a> |
+      <a href="https://instagram.com">Instagram</a> |
+      <a href="https://twitter.com">Twitter</a> |
+      <a href="https://tiktok.com">Tiktok</a> |
+      <a href="https://linkedin.com">Linkedin</a> |
+      <a href="https://youtube.com">Youtube</a>
+    </p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="../../js/logout.js"></script>
+  <script src="../../js/settings.js"></script>
+  <script>
+  // Al cargar el DOM, actualizamos el mensaje de bienvenida
+  document.addEventListener('DOMContentLoaded', () => {
+    // Se asume que en localStorage se guarda un objeto con clave 'usuario'
+    const usuarioJSON = localStorage.getItem('usuario');
+    if (usuarioJSON) {
+      const usuario = JSON.parse(usuarioJSON);
+      // Si el rol es 'Medico', extraemos el nombre y apellido
+      if (usuario.rol === 'Medico') {
+        const welcomeElement = document.getElementById('welcomeMsg');
+        welcomeElement.textContent = `Bienvenido, Dr. ${usuario.nombre} ${usuario.apellido}`;
+      }
+    }
+  });
+  </script>
+</body>
+</html>

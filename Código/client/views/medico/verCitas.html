@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ver Citas Asignadas</title>
+  <link rel="stylesheet" href="../../css/verCitasMedico.css">
+</head>
+<body>
+  <!-- CABECERA UNIFICADA -->
+  <header>
+    <div class="top-header">
+      <div class="left-nav">
+        <div class="logo">
+          <img src="../../images/municipalidad.jpg" alt="Logo Municipalidad de Lima" class="municipalidad-logo">
+          <a href="home.html">Municipalidad de Lima</a>
+        </div>
+        <nav class="nav-links">
+          <a href="home.html">Inicio</a>
+        </nav>
+      </div>
+      <div class="profile-menu">
+        <div id="profileToggle" class="profile-toggle">
+          <span class="profile-icon">👤</span>
+        </div>
+        <ul id="profileDropdown" class="dropdown">
+          <li><a href="settings.html">Configuración</a></li>
+          <li><a href="help.html">Ayuda</a></li>
+          <li class="separator"></li>
+          <li><button id="logoutBtn" class="logout-btn">Cerrar sesión</button></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- MENSAJE PRINCIPAL -->
+  <div class="welcome-message">
+    <h1>Citas Asignadas</h1>
+  </div>
+
+  <!-- TABLA PARA VISUALIZAR CITAS -->
+  <main>
+    <input type="hidden" id="medico_id">
+
+    <table id="citasTable">
+      <thead>
+        <tr>
+          <th>ID de Cita</th>
+          <th>Paciente</th>
+          <th>Fecha</th>
+          <th>Hora</th>
+          <th>Motivo</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Aquí se cargarán las citas dinámicamente -->
+      </tbody>
+    </table>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="hospital-footer">
+    <p>&copy; 2025 Hospital Solidaridad. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="../../js/verCitasMedico.js"></script>
+  <script src="../../js/logout.js"></script>
+  <script src="../../js/settings.js"></script>
+</body>
+</html>

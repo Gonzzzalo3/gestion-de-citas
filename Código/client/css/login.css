@@ -1,0 +1,82 @@
+/* Reinicio básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo y estilos generales */
+body {
+  background-color: #e0f7fa; /* Azul claro, similar al hospital Solidaridad de Piura */
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Título centrado */
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Contenedor del formulario con anchura fija */
+form#loginForm {
+  background: #fff;
+  width: 320px; /* Anchura fija para garantizar simetría */
+  margin: 0 auto; /* Centrado horizontal */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Etiquetas y campos del formulario */
+form#loginForm label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #444;
+}
+
+form#loginForm input[type="email"],
+form#loginForm input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Botón de Ingresar */
+form#loginForm button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #0078d4;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form#loginForm button[type="submit"]:hover {
+  background-color: #005fa3;
+}
+
+/* Enlace de registro: mismo ancho que el formulario y alineado a la izquierda */
+p {
+  width: 320px; /* Igual que el formulario para mantener la simetría */
+  margin: 10px auto 0 auto; /* Centrado en el bloque, pero el texto se alinea a la izquierda */
+  text-align: left;
+}
+
+p a {
+  color: #0078d4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
